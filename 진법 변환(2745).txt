@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <ctype.h>
+int main() {
+	char n[11];
+	int b, i, m = 0;
+	scanf("%s %d", n, &b);
+	for (i = 0; n[i] != '\0'; i++) {
+		int val;
+		if (isdigit(n[i])) val = n[i] - '0';	
+		if (isalpha(n[i])) val = n[i] - 'A' + 10;
+		m = m * b + val;
+	}
+	printf("%d", m);
+}
