@@ -11,13 +11,10 @@ int main() {
 
     scanf("%d %d", &p, &m);
 
-    // 플레이어 정보 입력
     input_players(p, level, name);
 
-    // 방에 플레이어 배정
     int room_count = assign_rooms(p, m, level, room, room_size);
 
-    // 방 정보 출력
     print_rooms(room_count, m, level, name, room, room_size);
 
     return 0;
